@@ -2,19 +2,21 @@ package cho.me.springbootweb;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.http.HttpMessageConverters;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 
-@RestController
-public class UserController {
+@Controller
+public class IndexController {
     @Autowired
     HttpMessageConverters httpMessageConverters;
-    @RequestMapping("/")
+    @GetMapping("/")
     public String get(){
-        httpMessageConverters.forEach(c->{
+
+       /* httpMessageConverters.forEach(c->{
             System.out.println(c.getClass());
-        });
+        });*/
         return "";
+        //curl http://localhost:8080/ 기본 리턴 String
     }
 
 }
