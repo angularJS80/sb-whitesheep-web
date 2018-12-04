@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class RestUserController {
     @Autowired
     HttpMessageConverters httpMessageConverters;
+
     @RequestMapping("/getUser")
     public User getUser(){
         User user = new User();

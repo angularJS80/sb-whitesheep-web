@@ -1,9 +1,8 @@
 package cho.me.springbootweb;
 
-/*
+
 import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
-*/
 public class User {
     String name;
     int age;
