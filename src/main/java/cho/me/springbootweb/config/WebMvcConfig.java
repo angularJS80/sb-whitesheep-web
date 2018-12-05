@@ -1,6 +1,7 @@
 package cho.me.springbootweb.config;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.format.FormatterRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
@@ -11,4 +12,8 @@ public class WebMvcConfig implements WebMvcConfigurer{
         return new HttpMessageConverters(converter);
     }*/
 
+   /* @Override
+    public void addFormatters(FormatterRegistry registry) {
+        registry.addConverter(new UserNameConverter());
+    }*/
 }
